@@ -1,4 +1,4 @@
-﻿/*
+/*
 - Room Rental System:
 This is a console-based application that allows users to rent rooms and stores the rented rooms' occupants' information.
 
