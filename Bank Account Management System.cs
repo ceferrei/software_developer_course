@@ -1,4 +1,9 @@
-﻿using Banco;
+/*
+The Bank Account Management System is a console-based application that allows users to create and manage bank accounts. 
+Users can create new accounts by specifying the account number, the account holder's name, and an optional initial deposit. 
+Once an account is created, users can perform transactions like depositing and withdrawing money from the account. 
+The application also supports changing the account holder's name.using Banco;*/
+
 using System.ComponentModel;
 using System.Globalization;
 
