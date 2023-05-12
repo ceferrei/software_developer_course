@@ -1,4 +1,8 @@
-﻿using Employee_Information;
+//This program manages employee data by allowing the user to input their id, name, and salary. It provides the option to increase the salary of a specific employee by a percentage. 
+//The program uses encapsulation to prevent direct modification of the salary and displays the updated employee list at the end. It's a useful tool for managing employee data in an 
+//organized and efficient manner.
+
+using Employee_Information;
 using System.Globalization;
 using System.Collections.Generic;
 
