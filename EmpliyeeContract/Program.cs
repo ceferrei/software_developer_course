@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Employee_Contract;
+/*Read the data of a worker with N contracts (N provided by the user). Then, at the end, prompt the user to enter a month and show what the worker's income was for that month, as shown in the example.*/
+
+using System;
 
 internal class Program
 {
@@ -20,7 +17,7 @@ internal class Program
 
         Console.WriteLine("Worker level (1 - Junior, 2 - Mid_Level, 3 - Senior): ");
         worker.Level = (WorkerLevel)Enum.Parse(typeof(WorkerLevel), Console.ReadLine());
-        /* esta linha az a leitura da entrada do usuário e faz a conversao para o tipo WorkerLevel. O método Enum.Parse converte uma string num valor 
+        /* esta linha faz a leitura da entrada do usuário e faz a conversao para o tipo WorkerLevel. O método Enum.Parse converte uma string num valor 
          * do tipo enum e, em seguida, é feita uma atribuição do valor convertido à propriedade Level do objeto worker*/
 
         Console.WriteLine("Base salary: ");
