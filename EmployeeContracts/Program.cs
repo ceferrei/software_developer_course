@@ -1,4 +1,7 @@
-﻿using Employee_Contracts.Entities.Enum;
+/*Read the data of a worker with N contracts (N provided by the user). Then, at the end, prompt the user to enter a month and show what 
+the worker's income was for that month, as shown in the example.*/
+
+using Employee_Contracts.Entities.Enum;
 using System.Globalization;
 using Employee_Contracts.Entities;
 
