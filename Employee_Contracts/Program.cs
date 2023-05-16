@@ -50,8 +50,6 @@ namespace Employee_Contracts
             Console.WriteLine("Worker level: " + worker.Level);
             Console.WriteLine("Base salary: " + worker.BaseSalary.ToString("F2"));
             Console.WriteLine("Total income for: " + monthYear + ": " + worker.Income(year, month).ToString("F2", CultureInfo.InvariantCulture));
-
-
         }
     }
 }
