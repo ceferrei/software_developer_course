@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess</title>
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/705310/pexels-photo-705310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            color: white;
+        }
+
+        fieldset {
+            border-radius: 25px;
+            width: 60%;
+            text-align: center;
+            margin: auto;
+            backdrop-filter: blur(6px);
+            background-color: rgba(0, 0, 0, 0.626);
+            padding: 30px;
+            margin-top: 100px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 32px;
+            background-color: rgba(36, 19, 19, 0.621);
+            color: white;
+            border-radius: 12px;
+            box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+        } 
+        button:hover {
+            box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.401);
+        }
+        button:active {
+            background-color: rgba(36, 19, 19, 0.621);
+            box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.6);
+            color: white;
+        }
+      
+    </style>
+</head>
+<body onload="sorteia_numero()">
+<fieldset>
+    <h1>I will give you your lucky number!</h1>
+    <p>Start playing to guess the number </p>
+    <button onclick="jogar()">Guess my lucky number</button>
+    
+    <script>
+        var aleatorio;
+        var palpite;
+        var count = 0;
+        
+        function sorteia_numero() {
+            aleatorio = Math.trunc(Math.random() * 100) + 1;
+        }
+        
+        function jogar() {
+            while (palpite !== aleatorio) {
+                palpite = Number(window.prompt('What is your guess?'));
+                
+                if (aleatorio > palpite) {
+                    window.alert('The number I am thinking of is higher. Try again.');
+                } else if (aleatorio < palpite) {
+                    window.alert('The number I am thinking of is lower. Try again.');
+
+                } else {
+                    window.alert('You guessed it! Congratulations!');
+                }
+                count++;
+            }
+            window.alert(`You guessed it in ${count} attempts.`);
+        }
+    </script>
+</fieldset>
+</body>
+</html>

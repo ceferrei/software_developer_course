@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+        html{
+            min-height: 100%;
+        }
+        body{
+            font-family: 'Bruno Ace SC', cursive;
+            background-image: url(https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600);
+            background-size: cover;
+        }
+        h1{
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            background-color: #000;
+            padding: 0.5em;
+        }
+        h2{
+            text-align: center;
+            font-size: 2em;
+            color: #000;
+            background-color: #ffffff8f;
+            padding: 0.5em;
+        }
+        section{
+            text-align: center;
+            font-size: 2em;
+            color: #000;
+            background-color: #ffffff2e;
+            padding: 0.5em;
+            width: auto;
+        }
+        input{
+            font-size: 1em;
+            color: #fff;
+            background-color: #201e1eae;
+            /* padding: 0.5em; */
+            border-radius: 10px;
+            border: 2px solid #000;
+            padding: 10px;
+            font-family: 'Bruno Ace SC', cursive;
+            width: 250px;
+        }
+        #output{
+            text-align: center;
+            font-size: 1.5em;
+            color: #000;
+            background-color: #fff;
+            padding: 0.5em;
+        }
+        fieldset{
+            border-radius: 25px;
+            width: 60%;
+            text-align: center;
+            margin: auto;
+            backdrop-filter: blur(6px);
+            background-color: rgba(0, 0, 0, 0.727);
+            padding: 30px;
+            margin-top: 100px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <h2>Enter a number and I will write its multiplication table</h2>
+    <section>
+        <form action="#" method="get">
+            <label for="inputNumber">Enter a number</label>
+            <input type="number" min="1" max="10" name="number" id="inputNumber">
+            <input type="submit" value="Generate" formaction="javascript:generateTable()">
+        </form>
+    </section>
+<fieldset>
+<section id="output">
+    <p>The multiplication table will appear here</p>
+</fieldset>
+</section>
+<script>
+    function generateTable()
+    {
+        var number = document.getElementById('inputNumber').value;
+        var output = document.getElementById('output');
+        output.innerHTML = `<p>Multiplication Table of ${number}</p>`;
+        for(var i = 1; i <= 10; i++)
+        {
+            output.innerHTML += `<p>${number} x ${i} = ${number * i}</p>`;
+
+        }
+    }
+</script>
+</body>
+</html>
