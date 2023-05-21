@@ -20,7 +20,7 @@ internal class Program
         int n = int.Parse(Console.ReadLine());
 
         Client client = new Client(nameC, email, birthDate);
-        Order order = new Order(new List<OrderItem>(), client, DateTime.Now);
+        Order order = new Order(new List<OrderItem>(), client, DateTime.Now, status);
 
         Console.WriteLine();
         for (int i = 1; i <= n; i++)
@@ -36,7 +36,7 @@ internal class Program
             Console.Write("Quantity: ");
             int quantity = int.Parse(Console.ReadLine());
 
-            OrderItem item = new OrderItem( product, quantity, priceP); // repara que enviamos o product
+            OrderItem item = new OrderItem(product, quantity, priceP); // repara que enviamos o product
             order.addItem(item);
         }
         Console.WriteLine();

@@ -10,11 +10,11 @@ namespace Read_and_Display_Order_Summary
 {
     internal class Order
     {
-        public List <OrderItem> Items { get; set; } = new List <OrderItem> (); //dar o nome no plural
+        public List<OrderItem> Items { get; set; } = new List<OrderItem>(); //dar o nome no plural
         public Client Client { get; set; }
 
         public DateTime Moment { get; set; }
-        
+
         public OrderStatus Status { get; set; }
 
 
@@ -22,25 +22,26 @@ namespace Read_and_Display_Order_Summary
         //Construtores
         public Order() { }
 
-        public Order(List<OrderItem> orderItem, Client client, DateTime moment) //Tirar a lista
+        public Order(List<OrderItem> orderItem, Client client, DateTime moment, OrderStatus status) //Tirar a lista
         {
             Items = orderItem;
             Client = client;
             Moment = moment;
+            Status= status;
         }
         //Metodos
-        public void addItem (OrderItem item) 
-        { 
-            Items.Add (item);
-        }
-        public void removeItem (OrderItem item)
+        public void addItem(OrderItem item)
         {
-            Items.Remove (item);
+            Items.Add(item);
         }
-        public double Total () 
+        public void removeItem(OrderItem item)
+        {
+            Items.Remove(item);
+        }
+        public double Total()
         {
             double sum = 0;
-            foreach (OrderItem item in Items) 
+            foreach (OrderItem item in Items)
             {
                 sum += item.SubTotal(); //Vamos somar os sutotais da lista OrderItem
             }
@@ -56,7 +57,7 @@ namespace Read_and_Display_Order_Summary
             sb.AppendLine("Order items: ");
             foreach (OrderItem item in Items)
             {
-                sb.AppendLine (item.ToString());
+                sb.AppendLine(item.ToString());
             }
             sb.AppendLine("Total price: $" + Total().ToString("F2", CultureInfo.InvariantCulture));
             return sb.ToString();

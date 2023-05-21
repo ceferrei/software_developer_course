@@ -21,13 +21,13 @@ namespace Read_and_Display_Order_Summary
             PriceOrder = priceOrder;
         }
 
-        public  double SubTotal()
+        public double SubTotal()
         {
             return Quantity * PriceOrder;
         }
-        public override string ToString() 
-        { 
-            return  Product.NameProduct + ", $" + PriceOrder.ToString("F2", CultureInfo.InvariantCulture)
+        public override string ToString()
+        {
+            return Product.NameProduct + ", $" + PriceOrder.ToString("F2", CultureInfo.InvariantCulture)
                 + ", Quantity: " + Quantity
                 + ", Subtotal: $" + SubTotal().ToString("F2", CultureInfo.InvariantCulture);
         }
