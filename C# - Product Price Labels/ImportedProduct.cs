@@ -30,9 +30,5 @@ namespace Product_Price_Labels
         {
             return $"{TotalPrice()} (Customs Fee: ${CustomsFee.ToString("F2", CultureInfo.InvariantCulture)})";
         }
-
-
     }
-
-
 }
