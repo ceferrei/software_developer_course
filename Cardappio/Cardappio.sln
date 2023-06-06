@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardappio", "Cardappio.csproj", "{904B2AED-C4A1-4A08-B961-3795527152FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{904B2AED-C4A1-4A08-B961-3795527152FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{904B2AED-C4A1-4A08-B961-3795527152FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{904B2AED-C4A1-4A08-B961-3795527152FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{904B2AED-C4A1-4A08-B961-3795527152FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30F22700-2E1B-44E4-A947-FF6B755E5C4E}
+	EndGlobalSection
+EndGlobal
